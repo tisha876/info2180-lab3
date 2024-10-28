@@ -76,7 +76,6 @@ function playerwins(){
 
 document.addEventListener('DOMContentLoaded', () => {   
     const status = document.getElementById('status')
-    console.log(status)
 
     const newgamebutton = document.querySelector('.btn')
     if (newgamebutton){
@@ -84,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     startGame()
 })
-
 
 function newgame(){
     spaces.fill(null)
@@ -106,11 +104,6 @@ function newgame(){
 }
 
 
-function startGame() {
-    const cells = document.querySelectorAll('#board div');
-    cells.forEach((cell, index) => {
-        cell.classList.add('square'); // Ensure square class is added
-        cell.addEventListener('click', (e) => clickedBox(cell, index)); // Use clickedBox function
-    });
-}
+
+startGame()
 
